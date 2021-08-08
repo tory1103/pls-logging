@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>PLSL - Local Logging</title>
+
+    <style type="text/css">
+.logo { width: 800px; margin: 40px auto; }
+.body { font-family: "helvetica"; width: 540px; margin: 40px auto; text-align:center;}
+img.c1 { position: absolute; top: 0; right: 0; border: 0; }
+span.c2 { color: #8F5902 }
+span.c9 { color: #1076FF }
+a { color: #0659BC; border-bottom: 1px dotted #0659BC; text-decoration: none; }
+a:hover { color: #0659BC; border-bottom: 1px solid #008000; }
+
+    </style>
+</head>
+<body>
+<div class="logo" align="center"><img src="logo.png" alt="logo"></div>
+<div class="body">
+    <h1>Welcome</h1>
+    <strong> Pls-Logging is short for Python Local Server Logging</strong>, which refers to a log with a web interface.<br>
+    It uses a modified version of Oh-My-PickleDB JSON Manager for data storing.
+
+    <h1>PLSL is powerful</h1>
+    <code>
+        <span class="c2">&gt;&gt;&gt;</span> <span class="c9">from</span> plsl <span class="c9">import</span> Logging
+        <br/><br/>
+        <span class="c2">&gt;&gt;&gt;</span> log = Logging(<span class="c9">"logging.log"</span>)
+        <br/><br/>
+        <span class="c2">&gt;&gt;&gt;</span> log.info(<span class="c9">"info test"</span>)
+        <br/><br/>
+        <span class="c2">&gt;&gt;&gt;</span> log.warning(<span class="c9">"warning test"</span>)
+        <br/><br/>
+        <span class="c2">&gt;&gt;&gt;</span> log.debug(<span class="c9">"debug test"</span>)
+        <br/><br/>
+        <span class="c2">&gt;&gt;&gt;</span> log.error(<span class="c9">"error test"</span>)
+
+    </code>
+    <h1>Easy installation</h1>
+    <code>
+        <span class="c2">$</span> pip install <span class="c9">plsl</span><br>
+        <span class="c2">$</span> git clone <span class="c9">https://github.com/tory1103/pls-logging.git</span>
+    </code>
+    <h1>Any troubles?</h1>
+    You can look at our documentation <a href="docs.html">here</a>.<br/>
+    <br/>
+    Pls-Logging was written by <a href="https://github.com/tory1103">Adrián Toral</a>.<br>
+    If you would like to file an issue report or fork the project, check out the <a href="https://github.com/tory1103/pls-logging">Github Repository</a>.
+    <a href="https://github.com/tory1103/pls-logging"><img style="position: fixed; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+</div>
+</body>
+</html>
