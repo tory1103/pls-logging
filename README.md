@@ -4,7 +4,7 @@ Pls-Logging is short for Python Local Server Logging, which refers to a log with
 
 It uses a modified version of [Oh-My-PickleDB](https://github.com/tory1103/oh-my-pickledb) JSON Manager for data storing.
 
-## Pls-Logging is fun and easy to use
+## Pls-Logging is fun and powerful
 
 ```python
 from plsl import Logging
@@ -15,7 +15,6 @@ log.info("info test")  # Info
 log.warning("warning test")  # Warning
 log.debug("debug test")  # Debug
 log.error("error test")  # Error
-
 ```
 
 ## Easy to Install
