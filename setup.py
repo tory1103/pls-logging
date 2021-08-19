@@ -5,7 +5,7 @@ Pls-Logging is short for Python Local Server Logging, which refers to a log with
 
 It uses a modified version of [Oh-My-PickleDB](https://github.com/tory1103/oh-my-pickledb) JSON Manager for data storing.
 
-## Pls-Logging is fun and easy to use
+## Pls-Logging is fun and powerful
 
 ```python
 from plsl import Logging
@@ -16,7 +16,6 @@ log.info("info test")  # Info
 log.warning("warning test")  # Warning
 log.debug("debug test")  # Debug
 log.error("error test")  # Error
-
 ```
 
 ## Easy to Install
@@ -66,7 +65,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="plsl",
-    version="0.1",
+    version="0.2",
     author="Adrián Toral",
     author_email="adriantoral@sertor.es",
     description="Python code logging with a server interface",
@@ -84,9 +83,13 @@ setuptools.setup(
         "Operating System :: OS Independent",
         "Topic :: System :: Logging",
     ],
-    py_modules=["plsl"],
+    packages=["plsl"],
     package_dir={"": "src"},
-    install_requires=["oh-my-pickledb==0.2.2", "Flask==2.0.1"],
+    data_files=[
+        ("lib/site-packages/plsl/static", ("src/plsl/static/icon.png", "src/plsl/static/logo.png",)),
+        ("lib/site-packages/plsl/templates", ("src/plsl/templates/index.html",)),
+    ],
+    install_requires=["oh-my-pickledb>=0.2.3.2", "Flask>=2.0.1"],
     python_requires=">=3.6",
     keywords='python, flask, gui, server, logging, python3, server-gui, localhost',
 )

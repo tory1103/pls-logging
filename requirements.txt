@@ -1,2 +1,3 @@
-oh-my-pickledb==0.2.2
-Flask==2.0.1
+oh-my-pickledb>=0.2.3.2
+Flask>=2.0.1
+setuptools>=47.1.0
