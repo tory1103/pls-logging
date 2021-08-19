@@ -1,6 +1,4 @@
-import time
-
-from src.plsl import Logging
+from src.plsl import WebLogging
 
 """
 
