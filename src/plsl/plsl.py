@@ -1,5 +1,7 @@
 import datetime
+import threading
 
+import flask
 import my_pickledb
 
 
@@ -57,3 +59,15 @@ class Logging:
     def warning(self, message: str, *args, datetime_format: str = "%d-%b-%Y %H:%M:%S", str_format: str = FMTS.DEFAULT, **kwargs): self.database.append("warning", str_format.format(message, datetime.datetime.now().strftime(datetime_format), *args, **kwargs))
 
     def error(self, message: str, *args, datetime_format: str = "%d-%b-%Y %H:%M:%S", str_format: str = FMTS.DEFAULT, **kwargs): self.database.append("error", str_format.format(message, datetime.datetime.now().strftime(datetime_format), *args, **kwargs))
+
+
+class WebLogging(Logging):
+    def __init__(self, location: str = "plsl.log", **kwargs):
+        super().__init__(location)
+
+        self.server = flask.Flask(__name__, **kwargs)
+
+        @self.server.route("/")
+        def logging( ): return flask.render_template("index.html", database=self.database.database.items())
+
+        threading.Thread(target=self.server.run, args=("0.0.0.0", 9999,), daemon=True).start()
