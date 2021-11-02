@@ -1,4 +1,5 @@
-from src.plsl import WebLogging
+from src.plsl import Logging
+from src.plsl.formating import datetime as time_only, message as message_only
 
 """
 
@@ -15,8 +16,8 @@ Issues: https://github.com/tory1103/pls-logging/issues
 
 """
 
-log = WebLogging()
+log = Logging()
 log.info("info test")
-log.warning("warning test", str_format=log.FMTS.TIME_ONLY)
-log.debug("debug test", str_format=log.FMTS.MESSAGE_ONLY)
+log.warning("warning test", str_format=time_only)
+log.debug("debug test", str_format=message_only)
 log.error("error test", "2_args", str_format="{0} / {2} <--> {user}", user="test_user")

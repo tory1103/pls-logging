@@ -65,16 +65,15 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="plsl",
-    version="0.2",
+    version="0.3",
     author="Adrián Toral",
     author_email="adriantoral@sertor.es",
     description="Python code logging with a server interface",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://tory1103.github.io/",
+    url="https://github.com/tory1103/pls-logging",
     project_urls={
         "Website": "https://github.com/tory1103/pls-logging",
-        "Documentation": "https://tory1103.github.io/",
         "Issues": "https://github.com/tory1103/pls-logging/issues",
     },
     classifiers=[
@@ -89,7 +88,7 @@ setuptools.setup(
         ("lib/site-packages/plsl/static", ("src/plsl/static/icon.png", "src/plsl/static/logo.png",)),
         ("lib/site-packages/plsl/templates", ("src/plsl/templates/index.html",)),
     ],
-    install_requires=["oh-my-pickledb>=0.2.3.2", "Flask>=2.0.1"],
+    install_requires=["oh-my-pickledb==4", "Flask>=2.0.1"],
     python_requires=">=3.6",
     keywords='python, flask, gui, server, logging, python3, server-gui, localhost',
 )
